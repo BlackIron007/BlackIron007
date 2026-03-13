@@ -22,18 +22,32 @@ def generate_layout(repos):
 
     layout = []
 
-    base_orbit = 120
-    orbit_spacing = 60
+    base_orbit = 140
+    orbit_spacing = 70
+    planets_per_orbit = 3
 
-    for i, repo in enumerate(repos):
+    sorted_repos = sorted(repos, key=lambda r: r["name"])
 
-        orbit = base_orbit + i * orbit_spacing
+    for i, repo in enumerate(sorted_repos):
+
+        orbit_index = i // planets_per_orbit
+        planet_index_on_orbit = i % planets_per_orbit
+
+        orbit = base_orbit + orbit_index * orbit_spacing
+
+        angle_on_orbit = (planet_index_on_orbit / planets_per_orbit) * (2 * np.pi)
+
+        orbit_angle_offset = (orbit_index % 2) * (np.pi / planets_per_orbit)
+
+        angle_jitter = random.uniform(-np.pi / 18, np.pi / 18)  
+
+        angle = angle_on_orbit + orbit_angle_offset + angle_jitter
 
         planet = {
             "name": repo["name"],
             "orbit_radius": orbit,
-            "planet_size": 10 + repo["stars"] * 2,
-            "angle": random.uniform(0, 2*np.pi),
+            "planet_size": 12 + (i % 4) * 3,
+            "angle": angle,
             "color": LANGUAGE_COLORS.get(repo["language"], "#aaaaaa")
         }
 

@@ -1,5 +1,6 @@
 import json
 import math
+import random
 from PIL import Image, ImageDraw
 
 WIDTH = 800
@@ -15,28 +16,28 @@ def load_planets():
 
 def draw_starfield(draw):
 
-    import random
-
     for _ in range(200):
         x = random.randint(0, WIDTH)
         y = random.randint(0, HEIGHT)
         r = random.randint(1,2)
 
-        draw.ellipse((x-r,y-r,x+r,y+r), fill="white")
+        draw.ellipse((x-r,y-r,x+r,y+r), fill=(220, 220, 220))
 
 def draw_sun(draw):
 
-    r = 30
+    for r in range(90, 30, -6):
 
-    draw.ellipse(
-        (
-            CENTER[0]-r,
-            CENTER[1]-r,
-            CENTER[0]+r,
-            CENTER[1]+r
-        ),
-        fill=(255,200,0)
-    )
+        glow = int(200 * (r / 90))
+
+        draw.ellipse(
+            (
+                CENTER[0]-r,
+                CENTER[1]-r,
+                CENTER[0]+r,
+                CENTER[1]+r
+            ),
+            fill=(255, 200, glow)
+        )
 
 def draw_orbits(draw, planets):
 
@@ -67,14 +68,37 @@ def draw_planets(draw, planets):
         size = p["planet_size"]
 
         draw.ellipse(
-            (
-                x-size,
-                y-size,
-                x+size,
-                y+size
-            ),
-            fill=p["color"]
+        (
+        x-size-4,
+        y-size-4,
+        x+size+4,
+        y+size+4
+        ),
+        fill=(80,80,80)
         )
+
+        draw.ellipse(
+        (
+        x-size,
+        y-size,
+        x+size,
+        y+size
+        ),
+        fill=p["color"]
+        )
+
+        offset_x = 12 if x < CENTER[0] else -12
+        offset_y = -8 if y < CENTER[1] else 8
+
+        anchor_x = "l" if x < CENTER[0] else "r"
+        anchor_y = "b" if y < CENTER[1] else "t"
+
+        draw.text(
+            (x + offset_x, y + offset_y),
+            p["name"],
+            fill=(255,255,255),
+            anchor=anchor_x + anchor_y
+            )
 
 def render():
 

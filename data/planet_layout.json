@@ -1,86 +1,86 @@
 [
   {
-    "name": "ai-blog-platform",
-    "orbit_radius": 120,
-    "planet_size": 10,
-    "angle": 2.515532425010436,
-    "color": "#3572A5"
-  },
-  {
-    "name": "ai-social-media-studio",
-    "orbit_radius": 180,
-    "planet_size": 10,
-    "angle": 4.401442009122283,
-    "color": "#3572A5"
-  },
-  {
-    "name": "api-guardian-hackathon",
-    "orbit_radius": 240,
-    "planet_size": 10,
-    "angle": 0.4175331783537987,
-    "color": "#2b7489"
-  },
-  {
-    "name": "cerebro-hackathon",
-    "orbit_radius": 300,
-    "planet_size": 10,
-    "angle": 0.886888720270532,
-    "color": "#3572A5"
-  },
-  {
     "name": "Cortex",
-    "orbit_radius": 360,
-    "planet_size": 10,
-    "angle": 4.373497167718937,
-    "color": "#3572A5"
-  },
-  {
-    "name": "face-recognition-project",
-    "orbit_radius": 420,
-    "planet_size": 10,
-    "angle": 0.13518913280524728,
+    "orbit_radius": 140,
+    "planet_size": 12,
+    "angle": 0.15191770709263044,
     "color": "#3572A5"
   },
   {
     "name": "Flict",
-    "orbit_radius": 480,
-    "planet_size": 10,
-    "angle": 3.4738487311398916,
+    "orbit_radius": 140,
+    "planet_size": 15,
+    "angle": 1.9821586871861991,
     "color": "#2b7489"
   },
   {
+    "name": "ai-blog-platform",
+    "orbit_radius": 140,
+    "planet_size": 18,
+    "angle": 4.10670432492356,
+    "color": "#3572A5"
+  },
+  {
+    "name": "ai-social-media-studio",
+    "orbit_radius": 210,
+    "planet_size": 21,
+    "angle": 0.9832158150141047,
+    "color": "#3572A5"
+  },
+  {
+    "name": "api-guardian-hackathon",
+    "orbit_radius": 210,
+    "planet_size": 12,
+    "angle": 3.086345076050155,
+    "color": "#2b7489"
+  },
+  {
+    "name": "cerebro-hackathon",
+    "orbit_radius": 210,
+    "planet_size": 15,
+    "angle": 5.2420004757106025,
+    "color": "#3572A5"
+  },
+  {
+    "name": "face-recognition-project",
+    "orbit_radius": 280,
+    "planet_size": 18,
+    "angle": 0.03627437538549583,
+    "color": "#3572A5"
+  },
+  {
     "name": "git_test",
-    "orbit_radius": 540,
-    "planet_size": 10,
-    "angle": 0.9812265685978514,
+    "orbit_radius": 280,
+    "planet_size": 21,
+    "angle": 2.019046805814686,
     "color": "#888888"
   },
   {
     "name": "llm-verifiability-trust-layer",
-    "orbit_radius": 600,
-    "planet_size": 10,
-    "angle": 3.1280599872594195,
+    "orbit_radius": 280,
+    "planet_size": 12,
+    "angle": 4.1136553292738265,
     "color": "#3572A5"
   },
   {
     "name": "me-api-playground",
-    "orbit_radius": 660,
-    "planet_size": 10,
-    "angle": 1.8344785580601999,
+    "orbit_radius": 350,
+    "planet_size": 15,
+    "angle": 0.9465082198818497,
     "color": "#3572A5"
   },
   {
     "name": "n8n-on-render",
-    "orbit_radius": 720,
-    "planet_size": 10,
-    "angle": 5.4995746771221325,
+    "orbit_radius": 350,
+    "planet_size": 18,
+    "angle": 3.201875320883906,
     "color": "#384d54"
   },
   {
     "name": "odoo-hackathon",
-    "orbit_radius": 780,
-    "planet_size": 10,
-    "angle": 5.984327920431017,
+    "orbit_radius": 350,
+    "planet_size": 21,
+    "angle": 5.392474770348392,
     "color": "#f1e05a"
   }
 ]
