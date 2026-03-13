@@ -1,0 +1,86 @@
+[
+  {
+    "name": "ai-blog-platform",
+    "orbit_radius": 120,
+    "planet_size": 10,
+    "angle": 2.515532425010436,
+    "color": "#3572A5"
+  },
+  {
+    "name": "ai-social-media-studio",
+    "orbit_radius": 180,
+    "planet_size": 10,
+    "angle": 4.401442009122283,
+    "color": "#3572A5"
+  },
+  {
+    "name": "api-guardian-hackathon",
+    "orbit_radius": 240,
+    "planet_size": 10,
+    "angle": 0.4175331783537987,
+    "color": "#2b7489"
+  },
+  {
+    "name": "cerebro-hackathon",
+    "orbit_radius": 300,
+    "planet_size": 10,
+    "angle": 0.886888720270532,
+    "color": "#3572A5"
+  },
+  {
+    "name": "Cortex",
+    "orbit_radius": 360,
+    "planet_size": 10,
+    "angle": 4.373497167718937,
+    "color": "#3572A5"
+  },
+  {
+    "name": "face-recognition-project",
+    "orbit_radius": 420,
+    "planet_size": 10,
+    "angle": 0.13518913280524728,
+    "color": "#3572A5"
+  },
+  {
+    "name": "Flict",
+    "orbit_radius": 480,
+    "planet_size": 10,
+    "angle": 3.4738487311398916,
+    "color": "#2b7489"
+  },
+  {
+    "name": "git_test",
+    "orbit_radius": 540,
+    "planet_size": 10,
+    "angle": 0.9812265685978514,
+    "color": "#888888"
+  },
+  {
+    "name": "llm-verifiability-trust-layer",
+    "orbit_radius": 600,
+    "planet_size": 10,
+    "angle": 3.1280599872594195,
+    "color": "#3572A5"
+  },
+  {
+    "name": "me-api-playground",
+    "orbit_radius": 660,
+    "planet_size": 10,
+    "angle": 1.8344785580601999,
+    "color": "#3572A5"
+  },
+  {
+    "name": "n8n-on-render",
+    "orbit_radius": 720,
+    "planet_size": 10,
+    "angle": 5.4995746771221325,
+    "color": "#384d54"
+  },
+  {
+    "name": "odoo-hackathon",
+    "orbit_radius": 780,
+    "planet_size": 10,
+    "angle": 5.984327920431017,
+    "color": "#f1e05a"
+  }
+]
