@@ -1,16 +1,23 @@
-## Hi there 👋
+# Hi, I'm Dev Sharma 👋
 
-<!--
-**BlackIron007/BlackIron007** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Computer Science student exploring the intersection of **AI, backend systems, and developer tools**.
 
-Here are some ideas to get you started:
+I enjoy building things that are both technically interesting and practically useful.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Right now I'm especially interested in:
+- AI infrastructure and LLM systems
+- backend architecture
+- automation and developer tooling
+
+---
+
+### 📫 Connect with me
+
+📧 Email: sdev43083gmail.com  
+💼 LinkedIn: https://www.linkedin.com/in/dev-sharma-1184a8281/
+
+---
+
+### 🌌 My Coding Universe
+
+(Generating...)
