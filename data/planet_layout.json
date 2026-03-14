@@ -1,86 +1,62 @@
 [
   {
     "name": "Cortex",
-    "orbit_radius": 140,
-    "planet_size": 12,
-    "angle": 0.15191770709263044,
-    "color": "#3572A5"
+    "orbit_radius": 160,
+    "angle": -0.09808750396208131
   },
   {
     "name": "Flict",
-    "orbit_radius": 140,
-    "planet_size": 15,
-    "angle": 1.9821586871861991,
-    "color": "#2b7489"
+    "orbit_radius": 160,
+    "angle": 1.5781267096532727
   },
   {
     "name": "ai-blog-platform",
-    "orbit_radius": 140,
-    "planet_size": 18,
-    "angle": 4.10670432492356,
-    "color": "#3572A5"
+    "orbit_radius": 160,
+    "angle": 3.1841786873384548
   },
   {
     "name": "ai-social-media-studio",
-    "orbit_radius": 210,
-    "planet_size": 21,
-    "angle": 0.9832158150141047,
-    "color": "#3572A5"
+    "orbit_radius": 160,
+    "angle": 4.775220833456485
   },
   {
     "name": "api-guardian-hackathon",
-    "orbit_radius": 210,
-    "planet_size": 12,
-    "angle": 3.086345076050155,
-    "color": "#2b7489"
+    "orbit_radius": 230,
+    "angle": 0.6604325889546543
   },
   {
     "name": "cerebro-hackathon",
-    "orbit_radius": 210,
-    "planet_size": 15,
-    "angle": 5.2420004757106025,
-    "color": "#3572A5"
+    "orbit_radius": 230,
+    "angle": 2.4898867108951106
   },
   {
     "name": "face-recognition-project",
-    "orbit_radius": 280,
-    "planet_size": 18,
-    "angle": 0.03627437538549583,
-    "color": "#3572A5"
+    "orbit_radius": 230,
+    "angle": 3.8121481522060146
   },
   {
     "name": "git_test",
-    "orbit_radius": 280,
-    "planet_size": 21,
-    "angle": 2.019046805814686,
-    "color": "#888888"
+    "orbit_radius": 230,
+    "angle": 5.345943498858631
   },
   {
     "name": "llm-verifiability-trust-layer",
-    "orbit_radius": 280,
-    "planet_size": 12,
-    "angle": 4.1136553292738265,
-    "color": "#3572A5"
+    "orbit_radius": 300,
+    "angle": -0.05480333851262194
   },
   {
     "name": "me-api-playground",
-    "orbit_radius": 350,
-    "planet_size": 15,
-    "angle": 0.9465082198818497,
-    "color": "#3572A5"
+    "orbit_radius": 300,
+    "angle": 1.4699162960296244
   },
   {
     "name": "n8n-on-render",
-    "orbit_radius": 350,
-    "planet_size": 18,
-    "angle": 3.201875320883906,
-    "color": "#384d54"
+    "orbit_radius": 300,
+    "angle": 2.991145272067882
   },
   {
     "name": "odoo-hackathon",
-    "orbit_radius": 350,
-    "planet_size": 21,
-    "angle": 5.392474770348392,
-    "color": "#f1e05a"
+    "orbit_radius": 300,
+    "angle": 4.791277862574834
   }
 ]

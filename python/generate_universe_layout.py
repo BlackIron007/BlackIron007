@@ -5,15 +5,6 @@ import numpy as np
 INPUT_FILE = "data/repos.json"
 OUTPUT_FILE = "data/planet_layout.json"
 
-LANGUAGE_COLORS = {
-    "Python": "#3572A5",
-    "JavaScript": "#f1e05a",
-    "TypeScript": "#2b7489",
-    "HTML": "#e34c26",
-    "Dockerfile": "#384d54",
-    None: "#888888"
-}
-
 def load_repos():
     with open(INPUT_FILE) as f:
         return json.load(f)
@@ -27,7 +18,7 @@ def generate_layout(repos):
         return []
 
     planets_per_orbit = int(np.ceil(np.sqrt(repo_count)))
-    base_orbit = 140
+    base_orbit = 160
     orbit_spacing = 70
 
     sorted_repos = sorted(repos, key=lambda r: r["name"])
@@ -55,9 +46,7 @@ def generate_layout(repos):
         planet = {
             "name": repo["name"],
             "orbit_radius": orbit,
-            "planet_size": 12 + (i % 4) * 3,
             "angle": angle,
-            "color": LANGUAGE_COLORS.get(repo["language"], "#aaaaaa")
         }
 
         layout.append(planet)

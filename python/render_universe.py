@@ -6,13 +6,34 @@ from PIL import Image, ImageDraw
 WIDTH = 800
 HEIGHT = 800
 CENTER = (WIDTH // 2, HEIGHT // 2)
-
+UNIVERSE_SCALE = 0.8
+DOMAIN_COLORS = {
+    "Artificial Intelligence": (155, 89, 182),      
+    "Machine Learning": (142, 68, 173),             
+    "Computer Vision": (230, 126, 34),              
+    "Full Stack Development": (26, 188, 156),      
+    "Web Development": (52, 152, 219),             
+    "DevOps / Automation": (46, 204, 113)           
+}
 INPUT_FILE = "data/planet_layout.json"
+COMMITS_FILE = "data/commit_counts.json"
+CLUSTERS_FILE = "data/repo_clusters.json"
 OUTPUT_FILE = "assets/universe_frame.png"
 
 def load_planets():
     with open(INPUT_FILE) as f:
         return json.load(f)
+
+def load_commit_counts():
+
+    with open(COMMITS_FILE) as f:
+        return json.load(f)
+
+
+def load_clusters():
+
+    with open(CLUSTERS_FILE) as f:
+        return json.load(f)["mapping"]
 
 def draw_starfield(draw):
 
@@ -43,7 +64,7 @@ def draw_orbits(draw, planets):
 
     for p in planets:
 
-        r = p["orbit_radius"]
+        r = p["orbit_radius"] * UNIVERSE_SCALE
 
         draw.ellipse(
             (
@@ -57,15 +78,28 @@ def draw_orbits(draw, planets):
 
 def draw_planets(draw, planets):
 
+    commit_counts = load_commit_counts()
+    clusters = load_clusters()
+
+    if not commit_counts:
+        max_commits = 1
+    else:
+        max_commits = max(commit_counts.values()) if commit_counts.values() else 1
+    if max_commits == 0:
+        max_commits = 1
+
     for p in planets:
 
-        r = p["orbit_radius"]
+        r = p["orbit_radius"] * UNIVERSE_SCALE
         angle = p["angle"]
 
         x = CENTER[0] + r * math.cos(angle)
         y = CENTER[1] + r * math.sin(angle)
 
-        size = p["planet_size"]
+        size = 10 + math.sqrt(commit_counts.get(p["name"], 0)) * 2
+
+        domain = clusters.get(p["name"])
+        color = DOMAIN_COLORS.get(domain, (200,200,200))
 
         draw.ellipse(
         (
@@ -84,21 +118,24 @@ def draw_planets(draw, planets):
         x+size,
         y+size
         ),
-        fill=p["color"]
+        fill=color
         )
 
-        offset_x = 12 if x < CENTER[0] else -12
-        offset_y = -8 if y < CENTER[1] else 8
+        dx = x - CENTER[0]
+        dy = y - CENTER[1]
 
-        anchor_x = "l" if x < CENTER[0] else "r"
-        anchor_y = "b" if y < CENTER[1] else "t"
+        if r == 0:
+            continue
+
+        label_offset = 22
+        label_x = x + (dx / r) * label_offset
+        label_y = y + (dy / r) * label_offset
+
+        anchor = ("l" if dx > 0 else "r") + "m"
 
         draw.text(
-            (x + offset_x, y + offset_y),
-            p["name"],
-            fill=(255,255,255),
-            anchor=anchor_x + anchor_y
-            )
+            (label_x, label_y), p["name"], fill=(255, 255, 255), anchor=anchor
+        )
 
 def render():
 
