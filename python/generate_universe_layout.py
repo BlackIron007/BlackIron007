@@ -1,5 +1,5 @@
 import json
-import random
+import hashlib
 import numpy as np
 
 INPUT_FILE = "data/repos.json"
@@ -22,9 +22,13 @@ def generate_layout(repos):
 
     layout = []
 
+    repo_count = len(repos)
+    if not repo_count:
+        return []
+
+    planets_per_orbit = int(np.ceil(np.sqrt(repo_count)))
     base_orbit = 140
     orbit_spacing = 70
-    planets_per_orbit = 3
 
     sorted_repos = sorted(repos, key=lambda r: r["name"])
 
@@ -39,7 +43,12 @@ def generate_layout(repos):
 
         orbit_angle_offset = (orbit_index % 2) * (np.pi / planets_per_orbit)
 
-        angle_jitter = random.uniform(-np.pi / 18, np.pi / 18)  
+        hash_object = hashlib.md5(repo["name"].encode('utf-8'))
+        hash_digest = hash_object.hexdigest()
+        hash_int = int(hash_digest, 16)
+
+        jitter_range = np.pi / 18
+        angle_jitter = ((hash_int % 1000) / 1000.0) * (2 * jitter_range) - jitter_range
 
         angle = angle_on_orbit + orbit_angle_offset + angle_jitter
 

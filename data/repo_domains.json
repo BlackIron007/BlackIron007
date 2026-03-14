@@ -1,0 +1,14 @@
+{
+  "ai-blog-platform": "Python, Flask or Django, Redis, SQLite, Alembic, Redux, React, Node.js, JavaScript, Collaborative Filtering, Content-Based Filtering, Natural Language Processing, Recommendation Systems, State Management, Database Migration",
+  "ai-social-media-studio": "FastAPI, Pydantic, SlowAPI, Python, HTML, Tailwind CSS, Vanilla JavaScript, Gemini API, Clipdrop Text-to-Image API, REST APIs, Uvicorn, Environmental Variables, Rate Limiting, CORS, Virtual Environment, AI, Machine Learning, Text Generation, Image Generation",
+  "api-guardian-hackathon": "TypeScript, React, Vite, Express.js, Supabase, Tailwind CSS, ESLint, Netlify, CORS",
+  "cerebro-hackathon": "Python, Streamlit, IBM Watsonx.ai, LangChain, ChromaDB, Git, Docker is not present but virtual environment is used,  AI, Machine Learning, Natural Language Processing, Autonomous Coding, Code Analysis, Code Generation, Self-Healing Code, IBM Granite, Retrieval-Augmented Generation, Vector Database, Code Execution, PythonREPLTool, MIT License",
+  "Cortex": "Python, Streamlit, LLM, Agent-Based Systems, Testing Frameworks, Custom Tools, UI Testing, Web Search, File I/O",
+  "face-recognition-project": "Python, OpenCV, Dlib, face_recognition, Flask, PostgreSQL, SQLAlchemy, Flask-Login, HTML, CSS, Bootstrap, Jinja2, Computer Vision, Face Detection, Attendance Management, Real-Time Logging, Privacy-First Design, Geolocation, Web Interface, Admin Dashboard, Machine Learning, Deep Learning, Facial Recognition, Image Processing, Database Management, Web Development, Flask-Migrate, Flask-WTF, Werkzeug, Shapely, GeoAlchemy2, Python-Dotenv",
+  "Flict": "NextJS, React, TypeScript, Firebase, Tailwind CSS, Radix UI, Genkit, Axios, React Hook Form, Recharts, Zod, Embla Carousel, Lucide React, Date FNS, Dotenv",
+  "git_test": "Text Analysis, Git, Markdown",
+  "llm-verifiability-trust-layer": "FastAPI, PyTorch, Transformers, Hugging Face, NLTK, scikit-learn, Pydantic, SQLAlchemy, Docker, LLM, Natural Language Processing, Claim Extraction, Verifiability Analysis, Trust Scoring, AI Middleware",
+  "me-api-playground": "FastAPI, Python, SQLite, SQLAlchemy, Pydantic, Uvicorn, REST API, Fetch API, HTML, JavaScript, Render",
+  "n8n-on-render": "n8n, Docker, Node.js, npm",
+  "odoo-hackathon": "Node.js, Express, SQLite, JavaScript, ESLint, Nodemon, Bcrypt, Compromise, Express-Session, Multer, Session-File-Store, Pico.css, AI, NLP, Full-Stack Development, Responsive Web Design, Point-Based Economy, Authentication, Authorization, Relational Database, Atomic Transactions"
+}

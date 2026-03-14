@@ -3,72 +3,96 @@
     "name": "ai-blog-platform",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2025-11-10T10:35:35Z"
+    "updated_at": "2025-11-10T10:35:35Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "ai-social-media-studio",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2026-03-02T06:43:01Z"
+    "updated_at": "2026-03-02T06:43:01Z",
+    "description": "AI-powered tool to generate social media captions, headlines, hashtags, and product images.",
+    "default_branch": "main"
   },
   {
     "name": "api-guardian-hackathon",
     "language": "TypeScript",
     "stars": 0,
-    "updated_at": "2025-06-30T05:58:47Z"
+    "updated_at": "2025-06-30T05:58:47Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "cerebro-hackathon",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2025-06-29T18:11:13Z"
+    "updated_at": "2025-06-29T18:11:13Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "Cortex",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2025-08-29T15:57:46Z"
+    "updated_at": "2025-08-29T15:57:46Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "face-recognition-project",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2025-08-11T16:54:49Z"
+    "updated_at": "2025-08-11T16:54:49Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "Flict",
     "language": "TypeScript",
     "stars": 0,
-    "updated_at": "2025-08-29T15:58:07Z"
+    "updated_at": "2025-08-29T15:58:07Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "git_test",
     "language": null,
     "stars": 0,
-    "updated_at": "2024-08-15T23:31:36Z"
+    "updated_at": "2024-08-15T23:31:36Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "llm-verifiability-trust-layer",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2026-03-13T17:16:53Z"
+    "updated_at": "2026-03-13T17:16:53Z",
+    "description": "AI middleware system for claim extraction, verifiability analysis, and trust scoring of LLM outputs.",
+    "default_branch": "main"
   },
   {
     "name": "me-api-playground",
     "language": "Python",
     "stars": 0,
-    "updated_at": "2026-01-30T20:40:28Z"
+    "updated_at": "2026-01-30T20:40:28Z",
+    "description": null,
+    "default_branch": "master"
   },
   {
     "name": "n8n-on-render",
     "language": "Dockerfile",
     "stars": 0,
-    "updated_at": "2025-06-16T11:28:36Z"
+    "updated_at": "2025-06-16T11:28:36Z",
+    "description": null,
+    "default_branch": "main"
   },
   {
     "name": "odoo-hackathon",
     "language": "JavaScript",
     "stars": 0,
-    "updated_at": "2025-07-29T09:57:22Z"
+    "updated_at": "2025-07-29T09:57:22Z",
+    "description": "An AI-powered community clothing exchange platform built in 8 hours for the Odoo Hackathon, featuring a full-stack architecture and a responsive UI.",
+    "default_branch": "main"
   }
 ]

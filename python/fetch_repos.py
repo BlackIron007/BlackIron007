@@ -40,7 +40,9 @@ def fetch_repositories():
             "name": repo["name"],
             "language": repo["language"],
             "stars": repo["stargazers_count"],
-            "updated_at": repo["updated_at"]
+            "updated_at": repo["updated_at"],
+            "description": repo["description"],
+            "default_branch": repo["default_branch"]
         })
 
     return results
