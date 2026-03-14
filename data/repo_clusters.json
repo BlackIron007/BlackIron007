@@ -1,0 +1,24 @@
+{
+  "domains": [
+    "Artificial Intelligence",
+    "Web Development",
+    "Machine Learning",
+    "Full Stack Development",
+    "DevOps / Automation",
+    "Computer Vision"
+  ],
+  "mapping": {
+    "ai-blog-platform": "Full Stack Development",
+    "ai-social-media-studio": "Artificial Intelligence",
+    "api-guardian-hackathon": "Full Stack Development",
+    "cerebro-hackathon": "Artificial Intelligence",
+    "Cortex": "Artificial Intelligence",
+    "face-recognition-project": "Computer Vision",
+    "Flict": "Web Development",
+    "git_test": "DevOps / Automation",
+    "llm-verifiability-trust-layer": "Machine Learning",
+    "me-api-playground": "Web Development",
+    "n8n-on-render": "DevOps / Automation",
+    "odoo-hackathon": "Full Stack Development"
+  }
+}
