@@ -20,4 +20,6 @@ Right now I'm especially interested in:
 
 ### 🌌 My Coding Universe
 
-(Generating...)
+<p align="center">
+  <img src="assets/universe.gif" width="700">
+</p>
