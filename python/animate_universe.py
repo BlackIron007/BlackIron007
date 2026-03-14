@@ -3,9 +3,9 @@ import math
 import random
 from PIL import Image, ImageDraw, ImageFont
 
-CENTER = (400, 400)
-WIDTH = 800
-HEIGHT = 800
+WIDTH = 700
+HEIGHT = 700
+CENTER = (WIDTH // 2, HEIGHT // 2)
 UNIVERSE_SCALE = 0.8
 
 FRAMES = 240
@@ -24,6 +24,17 @@ DOMAIN_COLORS = {
     "Web Development": (52, 152, 219),
     "DevOps / Automation": (46, 204, 113)
 }
+
+def get_font(size=12):
+    """Tries to load a system TrueType font, falling back to the default."""
+    try:
+        return ImageFont.truetype("DejaVuSans.ttf", size)
+    except IOError:
+        try:
+            return ImageFont.truetype("arial.ttf", size)
+        except IOError:
+            print("Warning: TrueType font not found. Labels may jitter.")
+            return ImageFont.load_default()
 
 
 def load_json(path):
@@ -56,39 +67,25 @@ def draw_sun(draw):
             fill=(255, 200, glow)
         )
 
-
-def create_frame(layout, commit_counts, clusters, frame):
-
-    img = Image.new("RGB", (WIDTH, HEIGHT), "black")
-    draw = ImageDraw.Draw(img)
-    
-    random.seed(0)
-    draw_starfield(draw)
-
-    base_speed = (2 * math.pi) / FRAMES
-
-    # Draw orbits first
+def draw_orbits(draw, layout):
     for p in layout:
         r = p["orbit_radius"] * UNIVERSE_SCALE
-
         draw.ellipse(
-            (
-                CENTER[0]-r,
-                CENTER[1]-r,
-                CENTER[0]+r,
-                CENTER[1]+r
-            ),
+            (CENTER[0]-r, CENTER[1]-r, CENTER[0]+r, CENTER[1]+r),
             outline=(80,80,80)
         )
 
-    draw_sun(draw)
+def add_planets_to_frame(base_img, layout, commit_counts, clusters, frame, font):
 
-    # Then draw planets so they appear on top of orbits
+    img = base_img.copy()
+    draw = ImageDraw.Draw(img)
+    
+    base_speed = (2 * math.pi) / FRAMES
+
     for p in layout:
         r = p["orbit_radius"] * UNIVERSE_SCALE
         base_angle = p["angle"]
 
-        # All planets rotate at the same angular speed for a perfect, continuous loop
         speed = base_speed
         angle = base_angle + frame * speed
 
@@ -102,12 +99,10 @@ def create_frame(layout, commit_counts, clusters, frame):
 
         color = DOMAIN_COLORS.get(domain, (200,200,200))
 
-        # Draw border
         draw.ellipse(
             (x-size-4, y-size-4, x+size+4, y+size+4),
             fill=(80,80,80)
         )
-        # Draw planet
         draw.ellipse(
             (x-size, y-size, x+size, y+size),
             fill=color
@@ -120,12 +115,18 @@ def create_frame(layout, commit_counts, clusters, frame):
             continue
 
         label_offset = 22
-        label_x = x + (dx / r) * label_offset
-        label_y = y + (dy / r) * label_offset
+        attach_x = x + (dx / r) * label_offset
+        attach_y = y + (dy / r) * label_offset
 
-        anchor = ("l" if dx > 0 else "r") + "m"
+        text_width = draw.textlength(p["name"], font=font)
+        
+        cos_angle = math.cos(angle)
+        
+        progress = (cos_angle + 1) / 2.0
+        
+        x_offset = (1.0 - progress) * -text_width
 
-        draw.text((label_x, label_y), p["name"], fill=(255, 255, 255), anchor=anchor)
+        draw.text((attach_x + x_offset, attach_y), p["name"], fill=(255, 255, 255), anchor="lm", font=font)
 
     return img
 
@@ -138,12 +139,19 @@ def main():
 
     clusters = load_json(CLUSTERS_FILE)["mapping"]
 
+    font = get_font()
+
+    base_img = Image.new("RGB", (WIDTH, HEIGHT), "black")
+    draw = ImageDraw.Draw(base_img)
+    
+    random.seed(0)
+    draw_starfield(draw)
+    draw_orbits(draw, layout)
+    draw_sun(draw)
+
     frames = []
-
     for frame in range(FRAMES):
-
-        img = create_frame(layout, commit_counts, clusters, frame)
-
+        img = add_planets_to_frame(base_img, layout, commit_counts, clusters, frame, font)
         frames.append(img)
 
     frames[0].save(
@@ -154,7 +162,7 @@ def main():
         loop=0
     )
 
-    print("Universe GIF generated")
+    print("Universe GIF generated successfully.")
 
 
 if __name__ == "__main__":

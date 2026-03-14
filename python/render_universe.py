@@ -1,7 +1,7 @@
 import json
 import math
 import random
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 WIDTH = 800
 HEIGHT = 800
@@ -19,6 +19,17 @@ INPUT_FILE = "data/planet_layout.json"
 COMMITS_FILE = "data/commit_counts.json"
 CLUSTERS_FILE = "data/repo_clusters.json"
 OUTPUT_FILE = "assets/universe_frame.png"
+
+def get_font(size=12):
+    """Tries to load a system TrueType font, falling back to the default."""
+    try:
+        return ImageFont.truetype("DejaVuSans.ttf", size)
+    except IOError:
+        try:
+            return ImageFont.truetype("arial.ttf", size)
+        except IOError:
+            print("Warning: TrueType font not found. Labels may render poorly.")
+            return ImageFont.load_default()
 
 def load_planets():
     with open(INPUT_FILE) as f:
@@ -80,6 +91,7 @@ def draw_planets(draw, planets):
 
     commit_counts = load_commit_counts()
     clusters = load_clusters()
+    font = get_font()
 
     if not commit_counts:
         max_commits = 1
@@ -134,7 +146,7 @@ def draw_planets(draw, planets):
         anchor = ("l" if dx > 0 else "r") + "m"
 
         draw.text(
-            (label_x, label_y), p["name"], fill=(255, 255, 255), anchor=anchor
+            (label_x, label_y), p["name"], fill=(255, 255, 255), anchor=anchor, font=font
         )
 
 def render():
